@@ -1,0 +1,20 @@
+<h1> Create New User With HTML form </h1>
+<form action="/users" method="post" accept-charset="UTF-8">
+  <%# Why does this work without the use of form_authenticity_token method? %>
+  <input type="hidden" name="authenticity_token">
+  <p>
+    <label for="user_username"> Usuer Name: </label>
+    <input type="text" name="user[username]" id="user_username">
+  </p>
+  <p>
+    <label for="user_email"> Email: </label>
+    <input type="email" name="user[email]" id="user_email">
+  </p>
+  <p>
+    <label for="user_password"> Password: </label>
+    <input type="password" name="user[password]" id="user_password">
+  </p>
+  <p>
+    <input type="submit" value="Create User">
+  </p>
+</form>

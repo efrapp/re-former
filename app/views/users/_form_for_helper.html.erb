@@ -1,0 +1,15 @@
+<h1> <%= @user.new_record? ? "Create New" : "Edit" %> User With form_for Rails helper </h1>
+
+<%= form_for @user do |f| %>
+
+  <p> <%= f.label :username, "Your user name here: " %> </p>
+  <p> <%= f.text_field :username, value: "Pancho" %> </p>
+
+  <p> <%= f.label :email, "Email: " %> </p>
+  <p> <%= f.email_field :email, placeholder: "example@example.com" %> </p>
+
+  <p> <%= f.label :passowrd, "Password: " %> </p>
+  <p> <%= f.password_field :password %> </p>
+
+  <p> <%= f.submit "Creat User" %> </p>
+<% end %>
